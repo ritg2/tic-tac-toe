@@ -1,0 +1,286 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Karla', sans-serif;
+    background: #192a32;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 50px;
+}
+
+.start-page {
+    text-align: center;
+    display: flex;
+   flex-direction: column;
+   justify-content: center;
+   justify-content: center;
+}
+
+.xo-wrapper{
+    background: #1f3540;
+    margin-top: 30px;
+    margin-bottom: 20px;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0px 5px #0f2029;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: fit-content;
+}
+
+.player-mark {
+    color: #a8bec9;
+    font-weight: 700;
+}
+
+.button-container {
+    background: #192a32;
+    border-radius: 5px;
+    padding: 5px;
+    margin-top: 10px;
+    display: flex;
+}
+
+.x, .o, 
+.selected-mark {
+    height: 40px;
+    width: 100px;
+    line-height: 33px;
+    margin-top: 0;
+    background: transparent;
+    border: none;
+    color:  #a8bec9;
+    font-family: 'Fredoka One', cursive;
+    font-weight: 700;
+    font-size: 40px;
+    text-align: center;
+    border-radius: 5px;
+    cursor: pointer;
+} 
+
+.selected-mark {
+    background-color:  #a8bec9;
+    color:  #192a32;
+}
+
+.tip {
+    color:  #545f65;
+    font-weight: 500;
+    font-size: 12px;
+    margin-top: 10px;
+}
+
+.new-game, .new-game-p2p {
+    background:  #f2b236;
+    border: none;
+    border-radius: 5px;
+    padding: 7px 10px;
+    font-weight: 700;
+    color:  #192a32;
+    margin: 5px;
+    box-shadow: 0px 5px #cc8b13;
+    margin-bottom: 10px;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.new-game-p2p {
+    background:   #31c4be;
+    box-shadow: 0px 5px #19615e;
+}
+
+.box, .boxed, .boxedo {
+    font-family: 'Fredoka One', cursive;
+    height: 90px;
+    width: 90px;
+    background: #1f3540;
+    border-radius: 10px;
+    color: #31c4be;
+    font-weight: 700;
+    line-height: 75px;
+    vertical-align: middle;
+    text-align: center;
+    font-size: 80px;
+    box-shadow: 0px 5px #0f2029;
+    margin-bottom: 5px;
+    cursor: pointer;
+}
+
+.boxed {
+    background: #31c4be;
+    color: #1f3540;
+}
+
+.boxedo {
+    background:  #f2b236;
+}
+.container {
+    padding: 20px;
+    display: grid;
+    grid-template-columns: repeat(3, 90px);
+    gap: 10px;
+    row-gap: 12px;
+}
+
+.mark-o{
+    color: #f2b236;
+}
+
+.marked-o{
+    color: #1f3540; 
+}
+
+.xo {
+    font-family: 'Fredoka One', cursive;
+    color: #31c4be;
+    font-size: 50px;
+    line-height: 30px;
+}
+
+.xo span {
+    color: #f2b236;
+    margin-left: 5px;
+}
+
+.turn {
+    height: 40px;
+    width: 90px;
+    line-height: 40px;
+    font-family: 'Fredoka One', cursive;
+    color: #a8bec9;
+    text-align: center;
+    background: #1f3540;
+    border-radius: 5px;
+    box-shadow: 0px 3px #0f2029;
+}
+
+.undo {
+    background: #a8bec9;
+    height: 40px;
+    width: 40px;
+    border: none;
+    border-radius: 5px;
+    margin-left: 45px;
+    box-shadow: 0px 3px #6c8997;
+}
+
+.fa-solid  {
+    background: #a8bec9;
+    color:  #192a32;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+.score,.scorex, .scoreo {
+    background: #a8bec9;
+    color:  #192a32;
+    border-radius: 10px;
+    height: 65px;
+    text-align: center;
+    font-weight: 700;
+    font-size: 12px;
+    padding: 10px;
+}
+
+.scorex{
+    background: #31c4be;
+}
+
+.scoreo{
+    background: #f2b236;
+}
+
+.score div, 
+.scorex div, 
+.scoreo div {
+    font-size: 25px;
+}
+
+.game-over {
+    position: fixed;
+    background: rgba(12, 19, 25, .5);
+    top:0px;
+    right:0px;
+    bottom:0px;
+    left:0px;
+    display: flex;
+    height:100%;
+    width:100%;
+    justify-content: center;
+    align-items: center;
+}
+
+.game-over-options {
+    width: 100%;
+    background: #1f3540;
+    text-align: center;
+    padding: 20px;
+}
+
+.who-won {
+    font-family: 'Fredoka One', cursive;
+    color: #31c4be;
+    font-size: 25px;
+    margin: 5px 0;
+}
+
+.who-wono {
+    font-family: 'Fredoka One', cursive;
+    color: #31c4be;
+    font-size: 25px;
+    margin: 5px 0;
+}
+.draw {
+    font-family: 'Fredoka One', cursive;
+    color: #31c4be;
+    font-size: 25px;
+    margin: 5px 0
+}
+
+.who-won::first-letter {
+    font-size: 45px;
+    font-weight: 700;
+    color: #31c4be;
+}
+
+.who-wono::first-letter {
+    font-size: 45px;
+    font-weight: 700;
+    color: #f2b236;
+}
+
+.win-condition {
+    color: #a8bec9;
+}
+
+.quit, .next-round {
+    background: #a8bec9;
+    border: none;
+    border-radius: 5px;
+    padding: 7px 10px;
+    font-weight: 700;
+    color:  #192a32;
+    margin: 5px;
+    box-shadow: 0px 3px  #6c8997;
+    cursor: pointer;
+}
+
+.next-round {
+    background: #f2b237;
+    box-shadow: 0px 3px  #cc8b13;
+}
+
+.restart-title {
+    color: #a8bec9;
+    font-weight: 700;
+    font-size: 35px;
+    margin: 10px;
+}
